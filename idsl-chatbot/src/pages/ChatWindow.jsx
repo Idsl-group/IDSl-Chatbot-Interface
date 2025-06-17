@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './ChatWindow.css';
+import Sidebar from '../components/sidebar/Sidebar';
 
 const ChatWindow = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -10,7 +11,7 @@ const ChatWindow = () => {
       <div className={`sidebar-overlay${sidebarOpen ? ' open' : ''}`}>
         <div className="sidebar-content">
           <button className="close-btn" onClick={() => setSidebarOpen(false)}>&times;</button>
-          {/* Sidebar content goes here */}
+          <Sidebar onStateChange={(state) => console.log('Sidebar state:', state)} />
         </div>
       </div>
       <div className="main-content">
