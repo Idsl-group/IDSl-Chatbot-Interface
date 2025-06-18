@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './ChatWindow.css';
-import Sidebar from '../components/sidebar/Sidebar';
+import Sidebar from '.././components/sidebar/Sidebar.jsx';
 
 const ChatWindow = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
