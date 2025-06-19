@@ -58,17 +58,14 @@ const ChatWindow = () => {
 
   return (
     <div className="chat-window">
-      {/* Sidebar overlay */}
-      <div className={`sidebar-overlay${sidebarOpen ? ' open' : ''}`}>
-        <div className="sidebar-content">
-          <button className="close-btn" onClick={() => setSidebarOpen(false)}>&times;</button>
-          <Sidebar onStateChange={(state) => console.log('Sidebar state:', state)} />
-        </div>
+      {/* Sidebar */}
+      <div className={`sidebar-container${sidebarOpen ? ' open' : ''}`}>
+        <Sidebar onStateChange={(state) => console.log('Sidebar state:', state)} />
       </div>
-      <div className="main-content">
-        
+      
+      <div className={`main-content${sidebarOpen ? ' sidebar-open' : ''}`}>
         <header className="chat-header">
-          <button className="menu-btn" onClick={() => setSidebarOpen(true)}>&#9776;</button>
+          <button className="menu-btn" onClick={() => setSidebarOpen(!sidebarOpen)}>&#9776;</button>
           <h1 className="chat-title">Intelligent Data Science Lab</h1>
         </header>
         
