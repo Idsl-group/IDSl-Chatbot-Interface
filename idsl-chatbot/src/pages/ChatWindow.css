@@ -20,7 +20,7 @@
 }
 
 .sidebar-container.open {
-  width: 330px;
+  width: 302px;
   transform: translateX(0);
 }
 
