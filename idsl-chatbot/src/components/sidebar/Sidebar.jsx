@@ -141,11 +141,6 @@ const Sidebar = ({ onStateChange }) => {
      setUploadedFiles(files);
   };
 
-  // Handle folder path change
-  const handleFolderPathChange = (path) => {
-    setFolderPath(path);
-  };
-
   // API call handlers
   const handleUpload = async () => {
     // Placeholder: Upload files to backend
@@ -350,8 +345,8 @@ const Sidebar = ({ onStateChange }) => {
               </label>
               <input
                 type="text"
-                value={folderPath}
-                onChange={(e) => handleFolderPathChange(e.target.value)}
+                value = "../client_cache"
+                readOnly
                 className="text-input"
                 placeholder="Enter folder path"
               />
